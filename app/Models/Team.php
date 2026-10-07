@@ -14,6 +14,7 @@ class Team extends Model
         'designation',
         'description',
         'image',
+        'modal_image',
         'sort_order',
         'status',
     ];

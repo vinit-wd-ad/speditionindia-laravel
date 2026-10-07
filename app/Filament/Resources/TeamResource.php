@@ -38,6 +38,13 @@ class TeamResource extends Resource
                     ->imageEditor()
                     ->maxSize(5120),
 
+                Forms\Components\FileUpload::make('modal_image')
+                    ->label('Modal Image')
+                    ->image()
+                    ->directory('teams')
+                    ->imageEditor()
+                    ->maxSize(5120),
+
                 Forms\Components\TextInput::make('sort_order')
                     ->label('Sort Order')
                     ->numeric()
