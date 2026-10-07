@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about-us', fn() =>  view('about-us'));
 Route::get('/mission-vision', fn() =>  view('mission-vision'));
-Route::get('/our-team', fn() =>  view('our-team'));
+Route::get('/our-team', [TeamController::class, 'index']);
 Route::get('/associated-members', [TeamController::class, 'associatedMembers']);
 Route::get('/affiliation-certification', fn() =>  view('affiliation-certification'));
 Route::get('/our-group-companies', fn() =>  view('our-group-companies'));

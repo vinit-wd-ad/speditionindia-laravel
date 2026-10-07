@@ -10,41 +10,34 @@
             <div class="row">
                 <div class="col-12">
                     <div class="sec-heading text-center">
-                        <!--<span class="sub-title wow fadeInUp" data-wow-delay=".1s"><i class="tji-box"></i>Meet Our Team</span>-->
                         <h2 class="sec-title txt-anim">People Behind <span>Spedition.</span></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-item card" data-project-id="harpreet-singh">
-                        <div class="team-img open-team-modal">
-                            <div class="team-img-inner">
-                                <img src="{{ asset('web/images/team/harpreet1.jpeg') }}" alt="">
+                @foreach ($teams as $team)
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="team-item card open-team-modal" style="cursor: pointer;" data-name="{{ $team->name }}"
+                            data-designation="{{ $team->designation }}"
+                            data-img="{{ asset('storage/' . ($team->modal_image ?? $team->image)) }}">
+
+                            <div class="team-img">
+                                <div class="team-img-inner">
+                                    <img src="{{ asset('storage/' . $team->image) }}" alt="{{ $team->name }}">
+                                </div>
+                            </div>
+
+                            <div class="team-content p-2">
+                                <h5 class="title"><a>{{ $team->name }}</a></h5>
+                                <span class="designation">{{ $team->designation }}</span>
+                            </div>
+
+                            <div class="d-none team-bio">
+                                {!! $team->description ?? '' !!}
                             </div>
                         </div>
-
-                        <div class="team-content open-team-modal p-2">
-                            <h5 class="title"><a>Harpreet Singh</a></h5>
-                            <span class="designation">Head Operations</span>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-item card" data-project-id="munish-bhardwaj">
-                        <div class="team-img open-team-modal">
-                            <div class="team-img-inner">
-                                <img src="https://speditionindia.com/wp-content/uploads/2021/09/munish-150x150.jpg"
-                                    alt="">
-                            </div>
-                        </div>
-
-                        <div class="team-content open-team-modal p-2">
-                            <h5 class="title"><a>Munish Bhardwaj</a></h5>
-                            <span class="designation">Country Head Fairs & Exhibitions</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
