@@ -15,5 +15,5 @@
   <link rel="stylesheet" href="{{ asset('web') }}/css/venobox.min.css">
   <link rel="stylesheet" href="{{ asset('web') }}/css/odometer-theme-default.css">
   <link rel="stylesheet" href="{{ asset('web') }}/css/meanmenu.css">
-  <link rel="stylesheet" href="{{ asset('web') }}/css/main.css?v=1.2.0">
+  <link rel="stylesheet" href="{{ asset('web') }}/css/main.css?v=1.3.0">
   <link rel="stylesheet" href="{{ asset('web') }}/css/custom.css?v=1.0.0">
