@@ -34,4 +34,4 @@
 <script src="{{ asset('web') }}/js/meanmenu.js"></script>
 <script src="{{ asset('web') }}/js/main.js"></script>
 <script src="{{ asset('web') }}/js/custom.js?v=1.1.05"></script>
-<script src="{{ asset('web') }}/js/team-model.js"></script>
+<script src="{{ asset('web') }}/js/team-model.js?v=1.0.0"></script>
