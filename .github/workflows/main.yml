@@ -20,7 +20,7 @@ jobs:
           script: |
             cd /home/u386335356/domains/adsensedesigns.com/public_html/spedition-laravel
             
-            # Code pull karein
+            # Code pull 
             git pull origin main
             
             # Dependencies install/update karein
@@ -33,8 +33,5 @@ jobs:
             php artisan route:cache
             php artisan view:cache
             
-            # Database migrations run karein (agar zaroori ho)
-            php artisan migrate --force
             
-            # Storage link ensure karein
             php artisan storage:link
