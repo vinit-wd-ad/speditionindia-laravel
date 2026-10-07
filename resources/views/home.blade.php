@@ -3,7 +3,7 @@
 @section('content')
     <!-- start: Banner Slider -->
     <section class="tj-slider-section">
-        <video class="w-100 object-cover" src="{{ asset('web/video/spedition1.mp4') }}" autoplay muted loop
+        <video class="w-100 object-cover" src="{{ asset('web/video/spedition2.mp4') }}" autoplay muted loop
             playsinline></video>
         <div class="circle-text-wrap wow fadeInUp" data-wow-delay="1s">
             <span class="circle-text" data-bg-image="{{ asset('web/images/hero/circle-text.webp') }}"></span>
