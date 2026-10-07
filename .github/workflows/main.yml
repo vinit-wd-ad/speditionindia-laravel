@@ -19,7 +19,22 @@ jobs:
           port: 65002
           script: |
             cd /home/u386335356/domains/adsensedesigns.com/public_html/spedition-laravel
-
-            git fetch origin main
-            git reset --hard origin/main
-            git clean -fd -e uploads/
+            
+            # Code pull karein
+            git pull origin main
+            
+            # Dependencies install/update karein
+            composer install --no-dev --optimize-autoloader
+            
+            # Cache clear aur optimize karein
+            php artisan config:clear
+            php artisan cache:clear
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            
+            # Database migrations run karein (agar zaroori ho)
+            php artisan migrate --force
+            
+            # Storage link ensure karein
+            php artisan storage:link
