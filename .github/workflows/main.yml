@@ -20,18 +20,12 @@ jobs:
           script: |
             cd /home/u386335356/domains/adsensedesigns.com/public_html/spedition-laravel
             
-            # Code pull 
+            # Pull latest code from GitHub
             git pull origin main
             
-            # Dependencies install/update karein
-            composer install --no-dev --optimize-autoloader
-            
-            # Cache clear aur optimize karein
+            # Clear old cache and optimize configurations
             php artisan config:clear
             php artisan cache:clear
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
-            
-            
-            php artisan storage:link
