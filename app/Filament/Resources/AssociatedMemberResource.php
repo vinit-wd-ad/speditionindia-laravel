@@ -52,7 +52,7 @@ class AssociatedMemberResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Image')
-                    ->circular(),
+                    ->label('Thumbnail'),
 
                 Tables\Columns\TextColumn::make('title')
                     ->label('Title')

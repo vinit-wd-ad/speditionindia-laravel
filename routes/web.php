@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\EventController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ProjectController;
+use App\Http\Controllers\Web\TeamController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,7 +14,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about-us', fn() =>  view('about-us'));
 Route::get('/mission-vision', fn() =>  view('mission-vision'));
 Route::get('/our-team', fn() =>  view('our-team'));
-Route::get('/associated-members', fn() =>  view('associated-members'));
+Route::get('/associated-members', [TeamController::class, 'associatedMembers']);
 Route::get('/affiliation-certification', fn() =>  view('affiliation-certification'));
 Route::get('/our-group-companies', fn() =>  view('our-group-companies'));
 Route::get('/gallery', fn() =>  view('gallery'));

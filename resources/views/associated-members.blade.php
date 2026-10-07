@@ -14,34 +14,13 @@
                     </div>
                 </div>
             </div>
-            @php
-                $clients = [
-                    'client-1.webp',
-                    'client-2.webp',
-                    'client-3.webp',
-                    'client-4.webp',
-                    'client-5.webp',
-                    'client-6.webp',
-                    'client-7.webp',
-                    'client-8.webp',
-                    'client-9.webp',
-                    'client-10.webp',
-                    'client-11.webp',
-                    'client-12.webp',
-                    'client-13.webp',
-                    'client-14.webp',
-                    'client-15.webp',
-                    'client-16.webp',
-                    'client-17.webp',
-                    'client-18.webp',
-                    'client-19.webp',
-                ];
-            @endphp
 
             <div class="row row-gap-md-3 justify-content-center">
-                @foreach ($clients as $client)
+                @foreach ($associatedMembers as $member)
                     <div class="col-md-2 scroll-anim-right">
-                        <img src="{{ asset('web/images/client/' . $client) }}" alt="Client Logo" class="border">
+                        {{-- Agar image Filament ke default public disk par save hoti hai --}}
+                        <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->title ?? 'Associated Member' }}"
+                            class="border">
                     </div>
                 @endforeach
             </div>
