@@ -72,7 +72,7 @@ START: Theme Default CSS
    */
   --tj-fs-body: 17px;
   --tj-fs-p: 17px;
-  --tj-fs-h1: 74px;
+  --tj-fs-h1: 50px;
   --tj-fs-h2: 48px;
   --tj-fs-h3: 32px;
   --tj-fs-h4: 24px;
@@ -154,19 +154,19 @@ h1 {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px),
   only screen and (min-width: 576px) and (max-width: 767px),
   (max-width: 575px) {
   h1 {
-    font-size: 45px;
+    font-size: 35px;
   }
 }
 
